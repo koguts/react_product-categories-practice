@@ -18,13 +18,12 @@ const products = [...productsFromServer];
 //   return (user.find(cat => user.id === ownerId));
 // }
 
+// const product = productsFromServer.map(product => {
+//   const category = null; // find by product.categoryId
+//   const user = null; // find by category.ownerId
 
-const product = productsFromServer.map((product) => {
-  const category = null; // find by product.categoryId
-  const user = null; // find by category.ownerId
-
-  return null;
-});
+//   return null;
+// });
 
 export const App = () => (
   <div className="section">
@@ -36,24 +35,14 @@ export const App = () => (
           <p className="panel-heading">Filters</p>
 
           <p className="panel-tabs has-text-weight-bold">
-            <a
-              data-cy="FilterAllUsers"
-              href="#/"
-            >
+            <a data-cy="FilterAllUsers" href="#/">
               All
             </a>
             {users.map(user => (
-              <a
-                key={user.id}
-                data-cy="FilterUser"
-                href="#/"
-              >
+              <a key={user.id} data-cy="FilterUser" href="#/">
                 {user.name}
               </a>
-            )
-            )
-            }
-
+            ))}
 
             {/* <a
               data-cy="FilterUser"
@@ -142,7 +131,6 @@ export const App = () => (
               <th>
                 <span className="is-flex is-flex-wrap-nowrap">
                   ID
-
                   <a href="#/">
                     <span className="icon">
                       <i data-cy="SortIcon" className="fas fa-sort" />
@@ -154,7 +142,6 @@ export const App = () => (
               <th>
                 <span className="is-flex is-flex-wrap-nowrap">
                   Product
-
                   <a href="#/">
                     <span className="icon">
                       <i data-cy="SortIcon" className="fas fa-sort-down" />
@@ -166,7 +153,6 @@ export const App = () => (
               <th>
                 <span className="is-flex is-flex-wrap-nowrap">
                   Category
-
                   <a href="#/">
                     <span className="icon">
                       <i data-cy="SortIcon" className="fas fa-sort-up" />
@@ -178,7 +164,6 @@ export const App = () => (
               <th>
                 <span className="is-flex is-flex-wrap-nowrap">
                   User
-
                   <a href="#/">
                     <span className="icon">
                       <i data-cy="SortIcon" className="fas fa-sort" />
